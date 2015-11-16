@@ -26,7 +26,7 @@ import static com.srybakov.restaurant.ApplicationConstants.*;
  */
 @Controller
 @RequestMapping(value = "/user")
-@PreAuthorize("hasRole('USER')")
+@PreAuthorize("hasAnyRole('ADMIN','USER')")
 public class UserController extends BaseController{
 
     @Autowired
