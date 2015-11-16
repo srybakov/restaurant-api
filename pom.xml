@@ -15,8 +15,6 @@
         <jackson.version>1.9.13</jackson.version>
         <apache.commons.version>3.4</apache.commons.version>
         <joda.version>2.5</joda.version>
-
-        <h2.database.version>1.4.187</h2.database.version>
         <mysql.version>5.1.35</mysql.version>
     </properties>
 
@@ -70,13 +68,6 @@
             <artifactId>joda-time</artifactId>
             <version>${joda.version}</version>
         </dependency>
-
-
-        <!--<dependency>-->
-            <!--<groupId>com.h2database</groupId>-->
-            <!--<artifactId>h2</artifactId>-->
-            <!--<version>${h2.database.version}</version>-->
-        <!--</dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>
