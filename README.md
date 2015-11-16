@@ -26,7 +26,7 @@ $ mvn package
 
 ### Run
 
-To run application please create local MySql database with 'test' name and root/root credentials.
+Before run please create local MySql database with 'test' name and root/root credentials.
 You can set your own database properties. For that change properties in resource/application.properties file and run
 ```sh
 $ mvn package
@@ -34,6 +34,10 @@ $ mvn package
 once again. 
 All database schemas will be created automatically.
 
+To run application
+```sh
+$ java -jar target/restaurant-1.0-SNAPSHOT.jar
+```
 ### Initial data
 
 By default database contains the following data:
