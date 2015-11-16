@@ -50,3 +50,14 @@ By default database contains the following data:
 
 The only 'user3' have remained vote. All other users voted by default. If you additionaly want to test vote system please create additional users for that. 
 
+### API
+ - Get most voted restaurant for today (user access only) - returns a name and number of votes of a most voted restaurant for today or error message in case if no votes were received for today.
+ - Get most voted restaurant (user access only) - returns a name and number of votes of a most voted restaurant for all time or error message in case if no votes were received for all time.
+ - Vote (user access only) - vote for a restaurant. One user can vote the only one time per day.
+ - Create restaurant (admin access only) - allow admin to create a new restaurant
+ - Input restaurant menu (admin access only) - allow admin to input a restaurant menu for today.
+ - Create user (admin access only) - admin can create a new user in vote system.
+
+### Examples (curl)
+
+
