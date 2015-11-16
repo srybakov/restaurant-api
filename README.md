@@ -63,11 +63,28 @@ The only 'user3' have remained vote. All other users voted by default. If you ad
  - Create user (admin access only) - admin can create a new user in vote system.
 
 ### Examples (curl)
+Get most voted restaurant:
 ```sh
 $ curl -u user1:user1 http://localhost:8080/user/getMostVotedRestaurant
 
 #Output example: {"message":"","restaurantName":"Deveti","voteNumber":3}
 ```
+
+Get most voted restaurant for today:
+```sh
+$ curl -u user1:user1 http://localhost:8080/user/getMostVotedForTodayRestaurant
+
+#Output example: {"message":"","restaurantName":"Boff","voteNumber":2}
+```
+
+Vote:
+
+
+Create user (windows syntax) with name = 'userName' and password = 'password' and role = 'USER'
+```sh
+curl -u admin:admin -X POST -H "Content-Type: application/json" -d "{\"userName\":\"userName\",\"password\":\"password\",\"roles\":[\"USER\"]}" http://localhost:8080/admin/createUser
+```
+
 
 
 
