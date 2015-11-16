@@ -1,2 +1,2 @@
-# Restaurant API (vote system)
+## Restaurant API (vote system)
 
