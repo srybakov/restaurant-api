@@ -17,6 +17,7 @@ import com.srybakov.restaurant.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -112,7 +113,7 @@ public class UserServiceImpl implements UserService {
             userRoles.add(userRole);
         }
         user.setName(name);
-        user.setPassword(password);
+        user.setPassword(new BCryptPasswordEncoder().encode(password));
         user.setRoles(userRoles);
         userRepository.save(user);
         return user;

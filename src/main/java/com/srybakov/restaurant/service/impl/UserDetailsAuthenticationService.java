@@ -45,11 +45,11 @@ public class UserDetailsAuthenticationService implements UserDetailsService {
     }
 
     private List<GrantedAuthority> buildUserAuthorities(Set<UserRole> userRoles) {
-        Set<GrantedAuthority> setAuthorities = new HashSet<GrantedAuthority>();
+        Set<GrantedAuthority> setAuthorities = new HashSet<>();
         for (UserRole userRole : userRoles) {
             setAuthorities.add(new SimpleGrantedAuthority(userRole.getName()));
         }
-        return new ArrayList<GrantedAuthority>(setAuthorities);
+        return new ArrayList<>(setAuthorities);
     }
 
     private static void throwAuthException(String username){
