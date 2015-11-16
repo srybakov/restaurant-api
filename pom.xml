@@ -7,8 +7,10 @@
     <groupId>com.srybakov.restaurant</groupId>
     <artifactId>restaurant</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
+        <java.version>1.8</java.version>
         <spring.boot.version>1.2.4.RELEASE</spring.boot.version>
         <spring.version>4.1.6.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
@@ -16,6 +18,7 @@
         <apache.commons.version>3.4</apache.commons.version>
         <joda.version>2.5</joda.version>
         <mysql.version>5.1.35</mysql.version>
+        <maven.compiler.version>3.3</maven.compiler.version>
     </properties>
 
 
@@ -75,4 +78,30 @@
             <version>${mysql.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
