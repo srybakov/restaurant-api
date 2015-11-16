@@ -46,4 +46,4 @@ INSERT INTO `votes` (`id`, `vote_date`, `restaurant_id`, `user_id`) VALUES (3, n
 
 INSERT INTO `votes` (`id`, `vote_date`, `restaurant_id`, `user_id`) VALUES (4, now(), 3, 1);
 INSERT INTO `votes` (`id`, `vote_date`, `restaurant_id`, `user_id`) VALUES (5, now(), 3, 2);
-INSERT INTO `votes` (`id`, `vote_date`, `restaurant_id`, `user_id`) VALUES (6, now(), 2, 3);
+
