@@ -32,12 +32,13 @@ You can set your own database properties. For that change properties in resource
 $ mvn package
 ```
 once again. 
-All database schemas will be created automatically.
 
 To run application
 ```sh
 $ java -jar target/restaurant-1.0-SNAPSHOT.jar
 ```
+During application startup all database schemas will be created automatically.
+
 ### Initial data
 
 By default database contains the following data:
@@ -47,12 +48,12 @@ By default database contains the following data:
  - user2/user2 [USER]
  - user3/user3 [USER]
  
-The only 'user2' and 'user3' have remained vote. All other users voted by default. If you additionaly want to test vote system please create additional users for that. 
+The only 'user2' and 'user3' have remained vote. By default all other users have voted already. If you want to test vote system with more users please create additional users for that. 
 
 ####Restaurants
-  - Dublis
-  - Deveti
-  - Boff
+  - Dublis (0 votes by default)
+  - Deveti (3 votes by default)
+  - Boff (2 votes by default)
 
 ### API
  - Get most voted restaurant for today (user/admin access only) - returns a name and number of votes of a most voted restaurant for today or error message in case if no votes were received for today.
